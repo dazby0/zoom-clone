@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
-import Navbar from "@/components/Navbar";
+
+import "@stream-io/video-react-sdk/dist/css/styles.css";
 
 import { Toaster } from "@/components/ui/toaster";
 
@@ -11,6 +12,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Zoomify",
   description: "Zoom clone made by Wojciech Kowalczyk - Inspired by JS Mastery",
+  icons: {
+    icon: "/icon/logo.svg",
+  },
 };
 
 export default function RootLayout({
